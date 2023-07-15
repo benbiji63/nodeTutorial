@@ -1,0 +1,45 @@
+// File system
+const fs = require('fs');
+const path = require('path'); //get base filename
+
+//Creat folder
+// fs.mkdir(path.join(__dirname, 'test'), {}, err => {
+//   if (err) throw err;
+//   console.log('Folder Created...');
+// });
+
+// Create and write to file
+// fs.writeFile(path.join(__dirname, '/test', 'hello.txt'), 'Hello to me', err => {
+//   if (err) throw err;
+//   console.log('File written...');
+
+//   // Append content
+//   fs.appendFile(
+//     path.join(__dirname, '/test', 'hello.txt'),
+//     ' \n I love me',
+//     err => {
+//       if (err) throw err;
+//       console.log('File written...');
+//     }
+//   );
+// });
+
+// Read file
+// fs.readFile(
+//   path.join(__dirname, '/test', 'hello.txt'),
+//   'utf8',
+//   (err,data) => {
+//     if (err) throw err;
+//     console.log(data);
+//   }
+// );
+
+// rename file
+fs.rename(
+  path.join(__dirname, '/test', 'hello.txt'),
+  path.join(__dirname, '/test', 'hello_world.txt'),
+  err => {
+    if (err) throw err;
+    console.log(err);
+  }
+);
